@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Cards</title>
+    <script src="index.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        background-color: #f0f2f5;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      h1 {
+        color: #333;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .user-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+      .user-card {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 300px;
+        transition: transform 0.3s ease;
+      }
+      .user-card:hover {
+        transform: translateY(-5px);
+      }
+      .user-card h2 {
+        color: #333;
+        margin-top: 0;
+      }
+      .user-card p {
+        color: #666;
+        margin: 5px 0;
+      }
+      .user-card .role {
+        background-color: #e7f3ff;
+        color: #0066cc;
+        display: inline-block;
+        padding: 3px 10px;
+        border-radius: 15px;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>User Cards</h1>
+      <button id="postsBtn">Posts</button>
+      <div class="user-cards"></div>
+    </div>
+  </body>
+</html>
