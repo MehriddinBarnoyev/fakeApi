@@ -27,8 +27,12 @@ document.addEventListener("DOMContentLoaded", () => {
                         <h2 class="user-name">${user.name}</h2>
                     </div>
                     <div class="post">
-                        <h3 class="post-title">${firstPost.title}</h3>
-                        <p class="post-body">${firstPost.body.length > 80 ? firstPost.body.slice(0, 80) + "..." : firstPost.body}</p>
+                        <h3 class="post-title">${firstPost.title.length > 30 ? firstPost.title.slice(0,30) + '...' : firstPost.title}</h3>
+                        <p class="post-body">${
+                          firstPost.body.length > 80
+                            ? firstPost.body.slice(0, 80) + "..."
+                            : firstPost.body
+                        }</p>
                         <button class="show-more-btn">Show More Posts</button>
                     </div>
                 `;
@@ -84,4 +88,8 @@ document.addEventListener("DOMContentLoaded", () => {
       container.innerHTML =
         "<p>Error loading user posts. Please try again later.</p>";
     });
+});
+
+document.querySelector("#toMain").addEventListener("click", () => {
+window.location.href = "index.html";
 });

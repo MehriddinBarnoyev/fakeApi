@@ -51,3 +51,4 @@ const showPhoto = (url) => {
     document.body.removeChild(modal);
   });
 };
+
